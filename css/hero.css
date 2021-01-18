@@ -9,7 +9,7 @@
   height:100px;
 background-color:#2C2AA8;
 display:flex;
-flex-direccion:row;
+flex-direction:row;
 justify-content:space-between;
 align-items:center;
 }
@@ -33,7 +33,7 @@ margin-left:50px;
   width:100%;
   height:80px;
   display:flex;
-  flex-direccion:row;
+  flex-direction:row;
   justify-content:center;
   align-items:center;
   list-style:none;
@@ -57,7 +57,7 @@ margin-left:50px;
         
 .secundaria{
     display:flex;
-    flex-direccion:row;
+    flex-direction:row;
     background-color:#fff;
     justify-content:center;
 }
@@ -71,12 +71,12 @@ margin-left:50px;
     position:relative;
     height:800px;
     border: 1px solid black;
-    background-image: url("./trabajando.jpeg");
+    background-image: url("../img/trabajando.jpeg");
     background-repeat:no-repeat;
     background-size:cover;
     object-position: left;
     display:flex;
-    flex-direccion:row;
+    flex-direction:row;
     /*background-color:#fff;*/
     justify-content:flex-end;
     align-items:center;
@@ -131,9 +131,9 @@ margin-left:50px;
                 color:black;
                 
              }
-           .secundaria .contenido1 > p,  .secundaria .contenido2 > p{
-        /*background-color:rgba(0,0,0,0.4);*/
-        }
+           /* .secundaria .contenido1 > p,  .secundaria .contenido2 > p{
+        background-color:rgba(0,0,0,0.4);
+        } */
             .secundaria .contenido1 .sub{
                 margin-top: 25px;
                 font-size:16px;
@@ -143,9 +143,7 @@ margin-left:50px;
             margin-left:25px;
             }
             
-            .footer-head{
-                
-            }
+           
             .imagen{
                 width:400px;
                 height:500px;
@@ -156,12 +154,12 @@ margin-left:50px;
                 }
                 
                  .secundaria .contenido1 .imagen{
-                    background-image:url("./taller.jpeg");
+                    background-image:url("../img/taller.jpeg");
                     background-repeat:no-repeat;
                     background-size:cover;
                 }
                 .secundaria .contenido2 .imagen{
-                    background-image:url("./img3.jpeg");
+                    background-image:url("../img/img3.jpeg");
                     background-repeat:no-repeat;
                     background-size:cover;
                 }
@@ -181,7 +179,7 @@ margin-left:50px;
                 list-style:none;
                 width:100%;
                 display:flex;
-                flex-direccion:row;
+                flex-direction:row;
                 justify-content:space-evenly;
                 flex:0 1 1;
                 z-index:1;
@@ -199,16 +197,16 @@ margin-left:50px;
             box-shadow: 0px 80px 20px  rgba(0,0,0,0.6);
             color:#fff;
         }
-        .footer-head ul li:nth-child(3){
-            /* margin-bottom:25px; */
-        }
+        /* .footer-head ul li:nth-child(3){
+            margin-bottom:25px; 
+        } */
         
         .footer-head:before{
                     position:absolute;
                     content:"";
                     width:100%;
                     height:100%;
-                    background-image: url("./aserrin.jpeg");
+                    background-image: url("../img/aserrin.jpeg");
     background-repeat:no-repeat;
     background-size:cover; 
     transform:rotateX(65deg);

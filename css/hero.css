@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+main{
+  max-width: 1440px;
+  margin: auto;
+}
 header {
   width: 100%;
   height: 100px;
@@ -38,10 +42,10 @@ header {
 }
 
 .menu ul li {
-  width: 120px;
-  height: 80px;
+  /* width: 120px; */
+  height: 40px;
   /*background-color:green;*/
-  line-height: 80px;
+  line-height: 40px;
   text-align: center;
   font-size: 1.2em;
   font-family: "Libre Baskerville", serif;
@@ -50,6 +54,11 @@ header {
 
 .menu ul li:nth-child(2) {
   width: 260px;
+}
+.menu ul li:hover{
+  color: #00a1e6;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
 .secundaria {
@@ -165,7 +174,7 @@ header {
   display: flex;
   justify-content: center;
   /* border-top: 2px solid blue;*/
-  perspective: 700px;
+  overflow: hidden;
 }
 
 .footer-head ul {
@@ -194,16 +203,16 @@ header {
             margin-bottom:25px; 
         } */
 
-.footer-head:before {
+/* .footer-head:before {
   position: absolute;
-  content: "";
   width: 100%;
-  height: 100%;
+  height: inherit;
+  content: "";
   background-image: url("../img/aserrin.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  transform: rotateX(65deg);
-}
+  transform: rotateX(25deg);
+} */
 footer {
   background-color: #00a1e6;
   text-align: center;

@@ -37,7 +37,7 @@ header {
   z-index: 100;
 }
 
-.menu ul {
+.menu .lista-menu {
   width: 100%;
   height: 80px;
   display: flex;
@@ -47,9 +47,9 @@ header {
   list-style: none;
 }
 
-.menu ul li {
+.menu .lista-menu li {
   /* width: 120px; */
-  height: 40px;
+  height: 80px;
   /*background-color:green;*/
   line-height: 40px;
   text-align: center;
@@ -58,10 +58,10 @@ header {
   color: #fff;
 }
 
-.menu ul li:nth-child(2) {
+.menu .lista-menu li:nth-child(2) {
   width: 260px;
 }
-.menu ul li:hover{
+.menu .lista-menu li:hover{
   color: #00a1e6;
   cursor: pointer;
   transition: all 0.5s;
@@ -239,10 +239,12 @@ footer {
   background-color: black;
   padding: 25px 0px;
 }
+
 .footer-content{
   text-align: center;
  color: #fff;
 }
+
 footer pre {
   font-size: 16px;
   z-index: 100;
@@ -254,9 +256,64 @@ footer pre {
     display: flex;
     flex-direction: column;
   }
-  .menu ul{
+  header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo{
+    margin-left: 0px;
+  }
+  header .menu{
+    margin-right: 0px;
+    width: 100px;
+  }
+  .menu{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu-mobil{
+    width: 50px;
+    height: 50px; 
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  .fa-bars{
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .menu .lista-menu{
+    display: none;
+    position: absolute;
+    top: 100px;
+    left:0%;
+    background-color: salmon;
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+  }
+  .menu .mostrar-menu{
+    animation: apareceMenu 1s linear;
+  }
+  .menu .oculta-menu{
+    animation: ocultaMenu 1s linear; 
+    left:  120%;
+  }
+  .menu .lista-menu > li{
+    line-height: 80px;
+  }
+  .menu .lista-menu li:nth-child(2) {
+    width: 100%;
+  }
+
+  .menu .lista-menu li:hover{
+    background-color: rgba(0, 0, 0, 0.2);
   }
   .principal{
     width: 100%;
@@ -269,6 +326,15 @@ footer pre {
   }
   .principal .texto{
     margin: auto;
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .principal .texto p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 30px;
+    font-family: "Roboto Slab", serif;
   }
 
   .secundaria{
@@ -295,5 +361,23 @@ footer pre {
 
   .footer-head ul li{
     box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.6);
+  }
+
+  @keyframes apareceMenu{
+    from{
+      left: 500px;
+    }
+    to{
+      left: 0px;
+    }
+  }
+
+  @keyframes ocultaMenu{
+    from{
+      left: 0%;
+    }
+    to{
+      left: 120%;
+    }
   }
 }

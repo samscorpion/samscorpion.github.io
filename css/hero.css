@@ -289,22 +289,20 @@ footer pre {
   }
   
   .menu .lista-menu{
-    display: none;
+    display: block;
     position: absolute;
     top: 100px;
-    left:0%;
+    left:120%;
     background-color: salmon;
     width: 100vw;
     height: 100vh;
-    transition: all 1s;
+    transition: all 2s;
   }
   .menu .mostrar-menu{
+    left:0%;
     animation: apareceMenu 1s linear;
   }
-  .menu .oculta-menu{
-    animation: ocultaMenu 1s linear; 
-    left:  120%;
-  }
+ 
   .menu .lista-menu > li{
     line-height: 80px;
   }

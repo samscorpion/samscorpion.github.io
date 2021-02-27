@@ -79,7 +79,7 @@ header {
   position: relative;
   height: 800px;
   /* border: 1px solid black; */
-  background-image: url("../img/trabajando.jpeg");
+  background-image: url("../img/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-position: left;
@@ -101,7 +101,7 @@ header {
   color: #fff;
   width: 450px;
   margin-right: 25px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 5px;
   border-radius: 10px;
   z-index: 1000;

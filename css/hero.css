@@ -16,7 +16,7 @@ header {
   position: relative;
   width: 100%;
   height: 120px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(61,63,78);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -141,9 +141,10 @@ header {
   position: relative;
   display: flex;
   flex-direction: row;
-  background-color: #fff;
+  background-color: rgb(26,28,32);
   justify-content: center;
   overflow: hidden;
+  border-radius: 0 0 20px 20px;
 }
 
 /* .secundaria::before{
@@ -163,13 +164,14 @@ header {
   font-size: 20px;
   font-family: "Roboto Slab", serif;
   text-align: center;
+  
   color: rgb(255, 255, 255);
   z-index: 100;
 }
-.secundaria .contenido1 > p,  .secundaria .contenido2 > p{
+/* .secundaria .contenido1 > p,  .secundaria .contenido2 > p{
   background-color:rgba(0,0,0,0.6);
   border-radius: 10px;
-}
+} */
 
 .secundaria .contenido1 .sub, .secundaria .contenido2 .sub  {
   margin-top: 25px;
@@ -207,7 +209,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  /* background-color: white; */
+  background-color: antiquewhite;
 }
 
 .footer-head ul {
@@ -252,7 +255,7 @@ header {
 footer {
   position: relative;
   width:100%;
-  background-color: black;
+  background-color: rgb(61,63,78);
   padding: 25px 0px;
   border-radius: 20px 20px 0 0;
 }
@@ -312,10 +315,113 @@ footer pre {
     height: 50px; 
     background-color: whitesmoke;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5px;
   }
 
-  #menu-mobil:checked ~ .menu{
+  #checked{
+    display: none;
+  }
+  #checked:checked ~ .menu{
     left: 0%;
+}
+
+#menu-mobil span{
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: black;
+  margin: 5px auto;
+  border-radius: 5px;
+
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+#menu-mobil.open .top-line{
+  animation-name: top-line-animation;
+}
+
+#menu-mobil.open .middle-line{
+  animation-name: middle-line-animation;
+}
+
+#menu-mobil.open .bottom-line{
+  animation-name: bottom-line-animation;
+}
+
+#menu-mobil .top-line{
+  animation-name: top-line-animation-close;
+}
+
+#menu-mobil .middle-line{
+  animation-name: middle-line-animation-close;
+}
+
+#menu-mobil .bottom-line{
+  animation-name: bottom-line-animation-close;
+}
+
+@keyframes top-line-animation {
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
+  }
+}
+
+@keyframes middle-line-animation {
+  20%, 100%{
+    margin: 0 auto;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom-line-animation {
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
+  }
+}
+
+@keyframes top-line-animation-close {
+  0%{
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
+  }
+  50%, 100%{
+    margin: 5px auto;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes middle-line-animation-close {
+  0%{
+    margin: 0 auto;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+  20%, 100%{
+    margin: 5px auto;
+    width:80%;
+    height: 4px;
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-line-animation-close{
+  0%{
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
+  }
+  50%, 100%{
+    margin: 5px auto;
+    transform: translateY(0px) rotate(0deg);
+  }
 }
   .fa-bars{
     font-size: 40px;

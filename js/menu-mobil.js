@@ -5,6 +5,16 @@ const menu_mobil = document.querySelector("#menu-mobil");
 
 menu_mobil.addEventListener("click", e =>{
    
-    menu_mobil.classList.toggle("open");
+    if(menu_mobil.classList.contains("open")){
+        menu_mobil.classList.toggle("open");
+        menu_mobil.classList.toggle("close")
+    }
+    else if(menu_mobil.classList.contains("close")){
+        menu_mobil.classList.toggle("close")
+        menu_mobil.classList.toggle("open");
+    }
+    else{
+        menu_mobil.classList.toggle("open");
+    }
     
 })

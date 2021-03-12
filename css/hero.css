@@ -352,15 +352,15 @@ footer pre {
   animation-name: bottom-line-animation;
 }
 
-#menu-mobil .top-line{
+#menu-mobil.close .top-line{
   animation-name: top-line-animation-close;
 }
 
-#menu-mobil .middle-line{
+#menu-mobil.close .middle-line{
   animation-name: middle-line-animation-close;
 }
 
-#menu-mobil .bottom-line{
+#menu-mobil.close .bottom-line{
   animation-name: bottom-line-animation-close;
 }
 
